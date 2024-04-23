@@ -11,7 +11,7 @@ export default function HomePage() {
             you and provides insights about your favorite travel destinations
           </p>
           <Link href='/chat'>
-            <button className='btn btn-secondary'>Get Started</button>
+            <button className='btn btn-secondary uppercase'>Get Started</button>
           </Link>
         </div>
       </div>
