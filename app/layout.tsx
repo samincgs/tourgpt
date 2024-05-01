@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ClerkProvider } from '@clerk/nextjs';
 import './globals.css';
+import Providers from './providers';
 
 const font = Inter({ subsets: ['latin'] });
 
@@ -19,7 +20,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang='en'>
-        <body className={font.className}>{children}</body>
+        <body className={font.className}>
+          <Providers>{children}</Providers>
+        </body>
       </html>
     </ClerkProvider>
   );
