@@ -5,7 +5,7 @@ const SidebarHeader = () => {
   return (
     <div className='flex items-center gap-4 px-4 mb-8'>
       <SiArcgis className='w-12 h-12 text-primary' />
-      <h2 className='font-extrabold text-xl text-primary'>TourGPT</h2>
+      <h2 className='font-extrabold text-xl text-primary mr-auto'>TourGPT</h2>
       <ThemeToggle />
     </div>
   );
