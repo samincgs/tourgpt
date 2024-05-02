@@ -12,16 +12,15 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         >
           <FaBarsStaggered className='w-8 h-8 text-primary' />
         </label>
-        <div className='bg-base-200 px-8 py-12 min-h-screen'>{children}</div>
+        <div className='bg-base-200 px-8 min-h-screen'>{children}</div>
       </div>
       <div className='drawer-side'>
         <label
           htmlFor='my-drawer-2'
           aria-label='close sidebar'
           className='drawer-overlay'
-        >
-          <Sidebar />
-        </label>
+        ></label>
+        <Sidebar />
       </div>
     </div>
   );

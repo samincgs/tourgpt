@@ -1,11 +1,10 @@
-import { UserButton } from '@clerk/nextjs';
+import Chat from '@/components/Chat';
 
 const ChatPage = () => {
   return (
-    <div>
-      <h1>ChatPage</h1>
-      <UserButton />
-    </div>
+    <>
+      <Chat />
+    </>
   );
 };
 export default ChatPage;
