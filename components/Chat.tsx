@@ -15,7 +15,7 @@ const Chat = () => {
       <div>
         <h2 className='text-5xl'>messages</h2>
       </div>
-      <form onSubmit={handleSubmit} className='max-w-8xl pt-12 '>
+      <form onSubmit={handleSubmit} className='max-w-7xl pt-12'>
         <div className='join w-full'>
           <input
             type='text'
