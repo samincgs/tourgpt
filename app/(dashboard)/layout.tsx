@@ -12,7 +12,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         >
           <FaBarsStaggered className='w-8 h-8 text-primary' />
         </label>
-        <div className='bg-base-200 px-8 min-h-screen'>{children}</div>
+        <div className='bg-base-200 px-8 min-h-screen md:ml-80'>{children}</div>
       </div>
       <div className='drawer-side'>
         <label
