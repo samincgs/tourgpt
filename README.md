@@ -17,4 +17,6 @@ INFO
 
 ### Credits
 
-- Inspired by Code with Antonio
+- Inspired by John Smilga <3
+
+This is his YouTube channel: [Coding Addict](https://www.youtube.com/codingaddict)
