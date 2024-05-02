@@ -19,4 +19,5 @@ INFO
 
 - Inspired by John Smilga <3
 
-This is his YouTube channel: [Coding Addict](https://www.youtube.com/codingaddict)
+Check him out! 
+[Coding Addict](https://www.youtube.com/codingaddict)
