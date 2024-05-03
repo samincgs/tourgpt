@@ -53,7 +53,7 @@ export const generateTourResponse = async ({
         { role: 'user', content: query },
       ],
       model: 'gpt-3.5-turbo',
-      temperature: 0,
+      temperature: 1,
     });
 
     const content = response.choices[0].message.content as string;
