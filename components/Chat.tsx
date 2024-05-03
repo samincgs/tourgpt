@@ -11,6 +11,8 @@ interface MessageProps {
   content: string | null;
 }
 
+// # FIX CSS WHEN USERS SCROLL DOWN
+
 const Chat = () => {
   const [text, setText] = useState('');
   const [messages, setMessages] = useState<MessageProps[]>([]);
