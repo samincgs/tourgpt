@@ -22,3 +22,18 @@ export const generateChatResponse = async (chatMessages: any) => {
     return null;
   }
 };
+
+export const getExistingTour = async ({ city, country }: DestinationProps) => {
+  return null;
+};
+
+export const generateTourResponse = async ({
+  city,
+  country,
+}: DestinationProps) => {
+  return null;
+};
+
+export const createNewTour = async (tour: any) => {
+  return null;
+};
