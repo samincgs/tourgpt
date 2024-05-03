@@ -1,6 +1,7 @@
 'use server';
 
 import OpenAI from 'openai';
+import { db } from './db';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -24,7 +25,15 @@ export const generateChatResponse = async (chatMessages: any) => {
 };
 
 export const getExistingTour = async ({ city, country }: DestinationProps) => {
-  return null;
+  const tour = await db.tour.findUnique({
+    where: {
+      city_country: {
+        city,
+        country,
+      },
+    },
+  });
+  return tour;
 };
 
 export const generateTourResponse = async ({
@@ -71,5 +80,9 @@ export const generateTourResponse = async ({
 };
 
 export const createNewTour = async (tour: any) => {
-  return null;
+  const newTour = await db.tour.create({
+    data: tour,
+  });
+
+  return newTour;
 };
