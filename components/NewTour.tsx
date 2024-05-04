@@ -23,13 +23,13 @@ const NewTour = () => {
       if (existingTour) return existingTour;
 
       const newTour = await generateTourResponse(destination);
-      if (newTour) {
-        await createNewTour(newTour);
-        queryClient.invalidateQueries({ queryKey: ['tours'] });
-        return newTour;
+      if (!newTour) {
+        toast.error('No matching city found...');
+        return null;
       }
-      toast.error('No matching city found...');
-      return null;
+      await createNewTour(newTour);
+      queryClient.invalidateQueries({ queryKey: ['tours'] });
+      return newTour;
     },
   });
 
