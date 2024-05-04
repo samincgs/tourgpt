@@ -117,3 +117,13 @@ export const getAllTours = async (searchTerm?: any) => {
   });
   return tours;
 };
+
+export const getSingleTour = async (id: any) => {
+  const tour = await db.tour.findUnique({
+    where: {
+      id,
+    },
+  });
+
+  return tour;
+};
