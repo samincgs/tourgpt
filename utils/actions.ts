@@ -115,4 +115,5 @@ export const getAllTours = async (searchTerm?: any) => {
       city: 'asc',
     },
   });
+  return tours;
 };
