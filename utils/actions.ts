@@ -87,7 +87,7 @@ export const createNewTour = async (tour: any) => {
   return newTour;
 };
 
-export const getAllTours = async (searchTerm: any) => {
+export const getAllTours = async (searchTerm?: any) => {
   if (!searchTerm) {
     const tours = await db.tour.findMany({
       orderBy: {
@@ -96,7 +96,6 @@ export const getAllTours = async (searchTerm: any) => {
     });
     return tours;
   }
-
   const tours = await db.tour.findMany({
     where: {
       OR: [
@@ -104,6 +103,8 @@ export const getAllTours = async (searchTerm: any) => {
           city: {
             contains: searchTerm,
           },
+        },
+        {
           country: {
             contains: searchTerm,
           },
@@ -114,5 +115,4 @@ export const getAllTours = async (searchTerm: any) => {
       city: 'asc',
     },
   });
-  return tours;
 };
